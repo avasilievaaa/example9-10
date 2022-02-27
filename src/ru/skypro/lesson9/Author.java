@@ -1,8 +1,10 @@
 package ru.skypro.lesson9;
 
+import java.util.Objects;
+
 public class Author {
-    String name;
-    String surname;
+    private String name;
+    private String surname;
 
     public Author (String name, String surname) {
         this.name = name;
@@ -16,5 +18,15 @@ public class Author {
     }
     public String toString () {
         return this.name + " " + this.surname;
+    }
+    //Домашнее задание №10
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Author author = (Author) o;
+        return Objects.equals(name, author.name) && Objects.equals(surname, author.surname);
+    }
+    public int hashCode() {
+        return Objects.hash(name, surname);
     }
 }

@@ -9,5 +9,6 @@ public class Main {
         Book secondBook = new Book("Капитанская дочка", new Author("Александр", "Пушкин"), 1836);
         System.out.println("Первая книга: " + firstBook.getBookName() + "; " + firstBook.getAuthor() + "; " + firstBook.getAge());
         System.out.println("Вторая книга: " + secondBook.getBookName() + "; " + secondBook.getAuthor() + "; " + secondBook.getAge());
+
     }
 }
